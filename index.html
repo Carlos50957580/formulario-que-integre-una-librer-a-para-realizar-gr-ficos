@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ventas Mensuales</title>
+    <!-- Chart.js desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1>Ingresar Ventas Mensuales</h1>
+    
+    <!-- Formulario para capturar datos -->
+    <form id="salesForm">
+        <label for="month">Mes:</label>
+        <input type="text" id="month" name="month" >
+        
+        <label for="sales">Ventas:</label>
+        <input type="number" id="sales" name="sales" >
+        
+        <button type="button" onclick="addData()">Agregar Datos</button>
+    </form>
+    
+    <!-- Canvas para el grafico -->
+    <canvas id="salesChart" width="400" height="200"></canvas>
+    
+    <!-- Contenedor de mensaje de error -->
+    <div id="error" style="color:red;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
